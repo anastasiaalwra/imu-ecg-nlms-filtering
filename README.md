@@ -6,11 +6,16 @@ Reproduction target: Ou, Z., Ma, S., Zhao, Z., & Wang, H. (2025). A Study on NLM
 
 # Key findings
 Reproduced the paper's NLMS pipeline on the public PhysioNet PTT-PPG dataset (22 subjects × 3 activities: sit / walk / run, 500 Hz, finger IMU, 3-lead chest ECG).
-The NLMS does the real work for baseline-drift removal (16–19 dB BPR across activities); the 0.16–40 Hz bandpass contributes ≈ 0 dB.
-The quaternion reference carries no motion-specific information: a literal constant q ≡ 1.0 matches or beats the real quaternion in BPR across every activity (paired Wilcoxon, p < 0.001).
+
+The NLMS algorithm does removes baseline-drift (16–19 dB BPR across activities); the 0.16–40 Hz bandpass contributes ≈ 0 dB.
+
+The **quaternion** reference carries no motion-specific information: a literal constant q ≡ 1.0 matches or beats the real quaternion in BPR across every activity (paired Wilcoxon, p < 0.001).
+
 The paper's headline +10 pp R-peak-retention gain (single → dual) does not reproduce: the actual improvement is +0.02 to +0.15 pp — roughly 100× smaller.
+
 Proposed a DSP-corrected variant: weighted multi-axis velocity reference, bandpass-prefiltered cross-correlation for delay estimation, and a 256-tap NLMS (instead of a single tap).
-PPG transplant — negative result: the ECG-tuned pipeline is harmful on PPG-derived heart rate; the report gives the mechanistic explanation (reference leakage inside the pulsatile band).
+
+PPG transplant — negative result: the ECG-tuned pipeline is harmful on PPG-derived heart rate; the report gives the mechanistic explanation (possible leakage).
 
 
 # Folder Overview
