@@ -28,6 +28,9 @@ Cross-modality validation: ECG-derived HR as ground truth for the PPG experiment
 
 
 # Repository structure
+
+```
+
 .
 ├── README.md
 ├── requirements.txt
@@ -57,6 +60,7 @@ Cross-modality validation: ECG-derived HR as ground truth for the PPG experiment
 │       └── nlms_plot_diagnostic.py
 ├── results/                             # per-record metric CSVs
 └── figures/                             # generated plots
+```
 
 # Data
 
