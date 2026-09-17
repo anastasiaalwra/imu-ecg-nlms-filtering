@@ -1,0 +1,2 @@
+File,Record,Activity,N_total_windows,MAE_raw_bpm,Cov5_raw_%,Nwin_raw,MAE_single_bpm,Cov5_single_%,Nwin_single,MAE_dual_bpm,Cov5_dual_%,Nwin_dual,d_MAE_raw_to_single,d_MAE_raw_to_dual,d_MAE_single_to_dual
+s11_sit.csv,s11_sit,sit,240,0.7533001961893299,99.58333333333333,240,7.592557012602553,57.49999999999999,240,8.029267379509138,60.416666666666664,240,-6.839256816413223,-7.275967183319808,-0.4367103669065848
